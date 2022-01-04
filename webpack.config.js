@@ -1,43 +1,40 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, './'),
-      watch: true
+    mode: 'development',
+    output: {
+        filename: 'bundle.js'
     },
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env','@babel/preset-react'] 
-          },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, './'),
         },
-      },
-      {
-        test: /\.s?css$/,
-        use: ["style-loader","css-loader","sass-loader"],
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
-      },
-        
-    ]
-  },
-  resolve: {
-    extensions: [ '.js', '.jsx' ]
-  },
+    },
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/env', '@babel/preset-react']
+                    },
+                },
+            },
+            {
+                test: /\.s?css$/,
+                use: ["style-loader", "css-loader", "sass-loader"],
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+
+        ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
 };
