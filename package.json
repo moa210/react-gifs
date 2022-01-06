@@ -14,7 +14,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
-    "deploy": "gh-pages -d ./"
+    "deploy": "webpack && gh-pages -d ./"
   },
   "dependencies": {
     "@babel/core": "^7.16.5",
