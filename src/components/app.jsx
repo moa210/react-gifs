@@ -12,7 +12,7 @@ class App extends Component {
 
         this.state = {
             gifs: [],
-            selectedGifId: "3osxY5iekJYTaYXo52"
+            selectedGifId: "HxK2gHUWujchWZ3IOY"
         };
         this.search = this.search.bind(this);
         this.selectGif = this.selectGif.bind(this);

@@ -14,7 +14,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
-    "deploy": "webpack -p && gh-pages -d dist"
+    "deploy": "webpack --config=webpack.config.js && gh-pages -d dist build"
   },
   "dependencies": {
     "@babel/core": "^7.16.5",
@@ -24,6 +24,7 @@
     "babel-preset-es2015": "^6.24.1",
     "css-loader": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
+    "gh-pages": "^3.2.3",
     "giphy-api": "^2.0.2",
     "i": "^0.3.7",
     "npm": "^8.3.0",
